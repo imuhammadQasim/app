@@ -1,0 +1,494 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.csss');
+body{
+  overflow-y: hidden;
+}
+.app-sidebar {
+  width: 32%;
+  padding: 0px 20px;
+  background-color: #f0f0e8;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 100vh !important;
+  overflow-y: auto;
+}
+
+/*******************************************************
+********CSS FOR SEARCH COMPONENT************************
+********************************************************/
+
+.user-search-area {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.user-search-text {
+  width: 100%;
+  height: 40px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  color: #28282B;
+  outline: none;
+  border: #ddd 1px solid;
+}
+
+
+.user-search-btn {
+  position: absolute;
+  right: 10px;
+  font-size: 25px;
+  color: #6366f1;
+  top: 5px;
+}
+
+
+/*******************************************************
+********CSS FOR USER LIST COMPONENT*********************
+********************************************************/
+.filtered-user {
+  border-bottom: #ccc 1px solid;
+  padding: 10px 10px;
+  color: #28282B;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 7px;
+}
+
+.selected-user {
+  border-bottom: #ccc 1px solid;
+  padding: 10px 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 7px;
+  background-color: #6366f1;
+}
+
+.filter-user-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* justify-content: space-between; */
+}
+
+.filter-user-details {
+  width: 60%;
+}
+
+.user-display-name {
+  padding: 1px 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-display-email {
+  padding: 1px 10px;
+  font-size: 12px;
+}
+
+.user-default-profile-pic,
+.user-profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #6366f1;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+.selected-user-profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  color: #6366f1;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+.user-start-chat {
+  padding: 10px 0px;
+}
+
+.user-start-chat-btn {
+  padding: 10px 5px;
+  border: none;
+  border-radius: 3px;
+  background-color: #6366f1;
+  color: white;
+}
+
+
+/*******************************************************
+*************CSS STYLES FOR CHAT AREA**************
+********************************************************/
+
+.app-chat-area {
+  background-color: white;
+  width: 70%;
+  padding: 0px 30px 0px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh !important;
+}
+
+.main-chatArea{
+  flex: 1;
+}
+/*******************************************************
+************* CHAT AREA HEADER STYLES ******************
+********************************************************/
+.app-chat-area-header {
+    padding: 10px 25px 10px;
+    margin-bottom: 2px;
+    text-align: left;
+    font-weight: bold;
+    background-color: #6366f1;
+    font-size: 18px;
+    background-color: #6366f1;
+    color: white;
+    border-radius: 10px;
+}
+
+/*******************************************************
+*************** MAIN CHAT AREA CONTAINER ****************
+********************************************************/
+.main-chat-area {
+  flex: 1;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+/*******************************************************
+***************** MESSAGE STYLING **********************
+********************************************************/
+.main-chat-area {
+  flex: 1;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  height: 100%;
+  max-height: 60vh;
+}
+
+/* Custom Scrollbar */
+.main-chat-area::-webkit-scrollbar {
+  width: 5px;
+}
+.main-chat-area::-webkit-scrollbar-thumb {
+  background-color: #6366f1;
+  border-radius: 10px;
+}
+.main-chat-area::-webkit-scrollbar-track {
+  background-color: #f3f3f3;
+}
+
+/*******************************************************
+************** INDIVIDUAL MESSAGE CONTAINER ************
+********************************************************/
+.message-container {
+  display: flex;
+  width: 100%;
+}
+
+.container-msg-time {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+}
+
+/*******************************************************
+******************** MESSAGES **************************
+********************************************************/
+.send-message,
+.received-message {
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-size: 14px;
+  word-break: break-word;
+  position: relative;
+  display: inline-block;
+}
+
+.send-message {
+  background-color: #6366f1;
+  color: #fff;
+  align-self: flex-end;
+  margin-left: auto;
+  text-align: right;
+  border-top-right-radius: 0;
+  float: right;
+}
+
+.received-message {
+  background-color: #e0dddd;
+  color: #28282B;
+  align-self: flex-start;
+  margin-right: auto;
+  text-align: left;
+  border-top-left-radius: 0;
+}
+
+/*******************************************************
+****************** TIMESTAMP TEXT **********************
+********************************************************/
+.msg-timestemp {
+  font-size: 12px;
+  color: #888;
+  margin: 3px 5px;
+  text-align: right;
+}
+
+/*******************************************************
+**************** MESSAGE INPUT SECTION *****************
+********************************************************/
+.send-message-div {
+  position: relative;
+  padding: 10px 20px;
+  background-color: #fafafa;
+}
+
+.send-message-input {
+  width: 100%;
+  height: 45px;
+  padding: 0 50px 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 14px;
+  color: #28282B;
+}
+
+.send-message-input:focus {
+  border-color: #6366f1;
+  outline: none;
+}
+
+.send-message-btn {
+  position: absolute;
+  right: 30px;
+  top: 18px;
+  font-size: 20px;
+  color: #6366f1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 5px 10px 0px 0px;
+}
+.send-emoji-btn {
+  position: absolute;
+  right: 70px;
+  top: 18px;
+  font-size: 20px;
+  color: #6366f1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 5px 10px 0px 0px;
+  text-decoration: none;
+}
+.send-image-btn {
+  position: absolute;
+  right: 115px;
+  top: 18px;
+  font-size: 20px;
+  color: #6366f1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 5px 10px 0px 0px;
+  text-decoration: none;
+}
+/*******************************************************
+******************* MESSAGE WRAPPER ********************
+********************************************************/
+.message-wrapper {
+  display: flex;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.align-left {
+  justify-content: flex-start;
+}
+
+.align-right {
+  justify-content: flex-end;
+}
+
+/*******************************************************
+********************* MESSAGE BUBBLE *******************
+********************************************************/
+.message-bubble {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+}
+
+/*******************************************************
+********************* MESSAGE STYLES *******************
+********************************************************/
+.send-message,
+.received-message {
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.send-message {
+  background-color: #6366f1;
+  color: white;
+  border-top-right-radius: 0px;
+}
+
+.received-message {
+  background-color: #f0f0f0;
+  color: #333;
+  border-top-left-radius: 0px;
+}
+
+/*******************************************************
+********************* TIMESTAMP TEXT *******************
+********************************************************/
+.msg-timestamp {
+  font-size: 11px;
+  color: #999;
+  margin-top: 5px;
+  text-align: right;
+}
+
+/*******************************************************
+****************** SCROLLBAR STYLE *********************
+********************************************************/
+.main-chat-area {
+    overflow-y: auto;
+    padding-right: 10px;
+    max-height: 70vh
+}
+
+.main-chat-area::-webkit-scrollbar,
+.app-sidebar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.main-chat-area::-webkit-scrollbar-thumb,
+.app-sidebar::-webkit-scrollbar-thumb {
+  background-color: #6366f1;
+  border-radius: 10px;
+}
+.lastmessage-time {
+    font-size: 12px;
+}
+.unread-count-badge {
+  background-color: #6366f1;
+  color: white;
+  font-size: 12px;
+  border-radius: 10px;
+  padding: 2px 8px;
+  margin-left: 5px;
+}
+.typing-indicator{
+  font-size: 11px;
+}
+.user-profile-wrapper {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  /* overflow: hidden; */
+}
+
+
+.user-profile-wrapper.no-profile {
+  background-color: #6366f1;
+  color: #fff;
+}
+
+/* When selected but no profile */
+.user-profile-wrapper.selected.no-profile {
+  background-color: #ffffff;
+  color: #6366f1;
+  border: 2px solid #6366f1;
+}
+
+/* Profile pic */
+.profile-pic-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Wrap content and dot */
+.profile-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Green dot styling */
+.online-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 13px;
+  height: 13px;
+  background-color: #27ae60;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.send-message-div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.emoji-picker-container {
+  position: absolute;
+  bottom: 60px; 
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media only screen and (max-width: 700px){
+    .filter-user-details , .lastmessage-time{
+      display: none;
+    }
+    .user-search-area{
+      display: none;
+    }
+    .app-chat-area{
+      width: 85%;
+    }
+}
