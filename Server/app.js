@@ -6,6 +6,7 @@ const userRouter = require('./controller/userController');
 const chatRouter = require('./controller/chatController');
 const messageRouter = require('./controller/messageController');
 
+app.use(cors())
 app.use(express.json({
   limit: '50mb'
 }));
